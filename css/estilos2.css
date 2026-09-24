@@ -1,0 +1,41 @@
+/* Estilos para el Ejercicio 1 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ffffff;
+}
+
+/* Encabezado h2 en cursiva y rojo */
+.subtitulo-rojo {
+    color: #e6005c;
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Contenedor alineado para la imagen */
+.contenedor-imagen {
+    text-align: center;
+    margin: 25px 0;
+}
+
+/* Párrafo con Verdana 30px y estilos intercalados */
+.parrafo-destacado {
+    font-family: Verdana, sans-serif;
+    font-size: 30px;
+    color: #000000;
+    line-height: 1.4;
+}
+
+mark {
+    background-color: #ffff00;
+    color: #000;
+}
+
+/* Bloque contenedor del enlace inferior */
+.caja-enlace {
+    border: 1px solid #000080;
+    background-color: #e8e8ff;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-top: 15px;
+}
