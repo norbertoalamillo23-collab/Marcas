@@ -2,60 +2,294 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Ejercicio 1.1 - Formato de texto</title>
+<title>Ejercicios HTML: Formato de texto, hipervínculos y tablas</title>
 <style>
+    /* Estilos generales de la página */
     body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    nav.menu {
+        background-color: #222;
+        padding: 12px 20px;
+        position: sticky;
+        top: 0;
+    }
+    nav.menu a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+    nav.menu a:hover {
+        text-decoration: underline;
+    }
+    section.ejercicio {
+        padding: 30px 30px 50px 30px;
+        border-bottom: 4px solid #ddd;
+    }
+    section.ejercicio > h2.titulo-seccion {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+    }
+
+    /* ===================== EJERCICIO 1 ===================== */
+    .ejercicio1 {
         border: 1px solid #999999;
         padding: 15px;
         max-width: 800px;
         font-family: "Times New Roman", Times, serif;
     }
-    h2 {
+    .ejercicio1 h1,
+    .ejercicio1 h2 {
+        margin: 10px 0;
+    }
+    .ejercicio1 h2 {
         color: red;
     }
-    .imagen-central {
+    .ejercicio1 .imagen-central {
         display: block;
         margin: 20px auto;
         width: 140px;
     }
-    p.parrafo-grande {
+    .ejercicio1 p.parrafo-grande {
         font-family: Verdana, Geneva, sans-serif;
         font-size: 30px;
     }
-    .enlace-caja {
+    .ejercicio1 .enlace-caja {
         border: 2px solid blue;
         padding: 5px;
         font-family: "Times New Roman", Times, serif;
         font-size: 16px;
     }
+
+    /* ===================== EJERCICIO 2 ===================== */
+    .ejercicio2 {
+        background-image: url('https://thumbs.dreamstime.com/z/flor-ejemplo-del-vector-44304295.jpg?ct=jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 20px;
+        min-height: 500px;
+    }
+    .ejercicio2 h4 {
+        text-align: center;
+        color: #e8471c;
+    }
+    .ejercicio2 h4 mark {
+        font-size: 14px;
+    }
+    .ejercicio2 .boton {
+        display: inline-block;
+        background-color: #d9a90a;
+        color: #fffdf0;
+        font-weight: bold;
+        padding: 10px 18px;
+        text-decoration: none;
+        border-radius: 2px;
+    }
+    .ejercicio2 pre {
+        background-color: rgba(255,255,255,0.5);
+        display: inline-block;
+        padding: 5px 10px;
+        font-family: "Courier New", monospace;
+    }
+    .ejercicio2 .capitulo4 {
+        background-color: #6f9ceb;
+        border: 2px solid black;
+        padding: 15px 20px;
+        margin-top: 40px;
+    }
+    .ejercicio2 .capitulo4 span {
+        background-color: white;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        padding: 2px 6px;
+        border: 1px solid #999;
+    }
+
+    /* ===================== EJERCICIO 3 ===================== */
+    .ejercicio3 {
+        font-family: "Times New Roman", Times, serif;
+    }
+    .ejercicio3 .contenedor1 {
+        border: 3px solid blue;
+        display: inline-block;
+        padding: 25px 20px 15px 20px;
+        margin-bottom: 30px;
+    }
+    .ejercicio3 .contenedor1 caption {
+        font-style: italic;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .ejercicio3 table.tabla1 {
+        border-collapse: separate;
+        border-spacing: 6px;
+    }
+    .ejercicio3 table.tabla1 th {
+        text-align: center;
+        padding: 4px 10px;
+    }
+    .ejercicio3 table.tabla1 td {
+        border: 2px solid blue;
+        padding: 15px 20px;
+        text-align: center;
+    }
+    .ejercicio3 table.tabla2 {
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    .ejercicio3 table.tabla2 caption {
+        font-style: italic;
+        font-size: 18px;
+        margin-bottom: 8px;
+        caption-side: top;
+    }
+    .ejercicio3 table.tabla2 th,
+    .ejercicio3 table.tabla2 td {
+        border: 2px solid #d1a415;
+        padding: 18px 30px;
+        text-align: center;
+    }
+    .ejercicio3 table.tabla2 th {
+        background-color: #e2e2e2;
+    }
+    .ejercicio3 table.tabla2 tr:nth-child(2) td,
+    .ejercicio3 table.tabla2 tr:nth-child(4) td {
+        background-color: #8dc63f;
+    }
+    .ejercicio3 table.tabla2 tr:nth-child(3) td,
+    .ejercicio3 table.tabla2 tr:nth-child(5) td {
+        background-color: #e2e2e2;
+    }
 </style>
 </head>
 <body>
 
-    <h1>Esto es un encabezado h1</h1>
-    <h2><em>Esto es un encabezado h2</em></h2>
+    <nav class="menu">
+        <a href="#ej1">Ejercicio 1</a>
+        <a href="#ej2">Ejercicio 2</a>
+        <a href="#ej3">Ejercicio 3</a>
+    </nav>
 
-    <svg class="imagen-central" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="48" fill="#f0405a"/>
-        <rect x="25" y="28" width="38" height="46" rx="3" fill="#29b6f6" stroke="#0d47a1" stroke-width="1.5"/>
-        <rect x="30" y="36" width="24" height="6" fill="#ffffff"/>
-        <circle cx="25" cy="34" r="1.8" fill="#0d47a1"/>
-        <circle cx="25" cy="44" r="1.8" fill="#0d47a1"/>
-        <circle cx="25" cy="54" r="1.8" fill="#0d47a1"/>
-        <circle cx="25" cy="64" r="1.8" fill="#0d47a1"/>
-        <rect x="58" y="30" width="8" height="45" rx="2" fill="#ffd54f" stroke="#0d47a1" stroke-width="1.2" transform="rotate(25 58 30)"/>
-    </svg>
+    <!-- ===================== EJERCICIO 1 ===================== -->
+    <section class="ejercicio" id="ej1">
+        <h2 class="titulo-seccion">Ejercicio 1</h2>
 
-    <p class="parrafo-grande">
-        Esto es un parrafo con un <mark>tamaño de 30px</mark><br>
-        y <u>un salto de línea</u>. El estilo utiliza una <strong>fuente verdana</strong>
-    </p>
+        <div class="ejercicio1">
+            <h1>Esto es un encabezado h1</h1>
+            <h2><em>Esto es un encabezado h2</em></h2>
 
-    <hr>
+            <svg class="imagen-central" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="48" fill="#f0405a"/>
+                <rect x="25" y="28" width="38" height="46" rx="3" fill="#29b6f6" stroke="#0d47a1" stroke-width="1.5"/>
+                <rect x="30" y="36" width="24" height="6" fill="#ffffff"/>
+                <circle cx="25" cy="34" r="1.8" fill="#0d47a1"/>
+                <circle cx="25" cy="44" r="1.8" fill="#0d47a1"/>
+                <circle cx="25" cy="54" r="1.8" fill="#0d47a1"/>
+                <circle cx="25" cy="64" r="1.8" fill="#0d47a1"/>
+                <rect x="58" y="30" width="8" height="45" rx="2" fill="#ffd54f" stroke="#0d47a1" stroke-width="1.2" transform="rotate(25 58 30)"/>
+            </svg>
 
-    <p class="enlace-caja">
-        Esto es un hipervínculo que va a google <a href="https://www.google.com" target="_blank">Ir a google</a>
-    </p>
+            <p class="parrafo-grande">
+                Esto es un parrafo con un <mark>tamaño de 30px</mark><br>
+                y <u>un salto de línea</u>. El estilo utiliza una <strong>fuente verdana</strong>
+            </p>
+
+            <hr>
+
+            <p class="enlace-caja">
+                Esto es un hipervínculo que va a google <a href="https://www.google.com" target="_blank">Ir a google</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================== EJERCICIO 2 ===================== -->
+    <section class="ejercicio" id="ej2">
+        <h2 class="titulo-seccion">Ejercicio 2</h2>
+
+        <div class="ejercicio2">
+            <h4>Esto es un encabezado h4 <mark>h2</mark></h4>
+
+            <p><a class="boton" href="#capitulo4">Ir a capitulo 4:</a></p>
+
+            <pre>esto es un texto
+   preformateado</pre>
+
+            <p>Este hipervículo va a <sup><strong>google</strong></sup>
+                <a class="boton" href="https://www.google.com" target="_blank">Ir a google:</a>
+            </p>
+
+            <div class="capitulo4" id="capitulo4">
+                <span>hipervinculo en la misma pagina</span><br>
+                <strong>Esto es el Capitulo 4</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EJERCICIO 3 ===================== -->
+    <section class="ejercicio" id="ej3">
+        <h2 class="titulo-seccion">Ejercicio 3</h2>
+
+        <div class="ejercicio3">
+            <div class="contenedor1">
+                <caption>Tabla prueba 1</caption>
+                <table class="tabla1">
+                    <tr>
+                        <th>columna 1</th>
+                        <th>columna 2</th>
+                        <th>columna 3</th>
+                        <th>columna 4</th>
+                    </tr>
+                    <tr>
+                        <td>col1</td>
+                        <td colspan="2">col2</td>
+                        <td rowspan="2">col3</td>
+                    </tr>
+                    <tr>
+                        <td>colum1</td>
+                        <td>colum2</td>
+                        <td>colum4</td>
+                    </tr>
+                </table>
+            </div>
+
+            <table class="tabla2">
+                <caption>Tabla prueba 2</caption>
+                <tr>
+                    <th>columna 1</th>
+                    <th>columna 2</th>
+                    <th>columna 3</th>
+                    <th>columna 4</th>
+                </tr>
+                <tr>
+                    <td>col1</td>
+                    <td colspan="2">col2</td>
+                    <td>col3</td>
+                </tr>
+                <tr>
+                    <td>colum1</td>
+                    <td rowspan="2">colum2</td>
+                    <td>colum3</td>
+                    <td>colum4</td>
+                </tr>
+                <tr>
+                    <td>column1</td>
+                    <td>column3</td>
+                    <td>column4</td>
+                </tr>
+                <tr>
+                    <td>colu1</td>
+                    <td>colu2</td>
+                    <td>colu3</td>
+                    <td>colu4</td>
+                </tr>
+            </table>
+        </div>
+    </section>
 
 </body>
 </html>
