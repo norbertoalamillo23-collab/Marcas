@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicios HTML: Listas, menús, bloques y texto en línea</title>
+<style>
+    /* Estilos generales de la página */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    nav.menu-principal {
+        background-color: #222;
+        padding: 12px 20px;
+        position: sticky;
+        top: 0;
+    }
+    nav.menu-principal a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        font-weight: bold;
+    }
+    nav.menu-principal a:hover {
+        text-decoration: underline;
+    }
+    section.ejercicio {
+        padding: 30px 30px 50px 30px;
+        border-bottom: 4px solid #ddd;
+    }
+    section.ejercicio > h2.titulo-seccion {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #222;
+    }
+
+    /* ===================== EJERCICIO 1: LISTAS ===================== */
+    .listas {
+        font-family: "Times New Roman", Times, serif;
+        max-width: 800px;
+    }
+    .listas .titulo-lista {
+        background-color: #5bc8e8;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+        padding: 6px 0;
+        margin-top: 25px;
+    }
+    .listas hr {
+        border: none;
+        border-top: 1px solid #999;
+        margin: 20px 0;
+    }
+    .listas ul {
+        list-style-type: circle;
+    }
+    .listas ul ul,
+    .listas ol ul {
+        list-style-type: square;
+    }
+
+    /* ===================== EJERCICIO 2: MENUS ===================== */
+    .menus {
+        font-family: "Times New Roman", Times, serif;
+    }
+    .menus .contenedor {
+        border: 2px solid #4a86c5;
+        max-width: 800px;
+        padding: 15px 20px;
+    }
+    .menus .contenedor h3 {
+        font-size: 18px;
+    }
+    .menus .contenedor hr {
+        border: none;
+        border-top: 1px solid #999;
+        margin: 20px -20px;
+    }
+    .menus ul.menu-horizontal {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: #8a8560;
+        display: flex;
+    }
+    .menus ul.menu-horizontal li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 18px 20px;
+    }
+    .menus ul.menu-vertical {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 220px;
+    }
+    .menus ul.menu-vertical li {
+        margin-bottom: 4px;
+    }
+    .menus ul.menu-vertical li a {
+        display: block;
+        background-color: #6fcf3d;
+        color: #f0fff0;
+        text-decoration: none;
+        padding: 18px 20px;
+    }
+    .menus ul.menu-vertical li.activo a {
+        background-color: #e01e1e;
+    }
+
+    /* ===================== EJERCICIO 3: DIV Y SPAN ===================== */
+    .bloques-contenedor {
+        font-family: "Times New Roman", Times, serif;
+        padding: 20px 15px 30px 15px;
+        background-color: #f2f2f2;
+        background-image:
+            radial-gradient(circle 6px at 20px 10px, #e8604a 90%, transparent 100%),
+            radial-gradient(circle 6px at 110px 10px, #e8604a 90%, transparent 100%),
+            repeating-linear-gradient(
+                90deg,
+                transparent 0px,
+                transparent 30px,
+                #1a1a1a 30px,
+                #1a1a1a 34px,
+                transparent 34px,
+                transparent 60px
+            );
+        background-size: 130px 60px, 130px 60px, 130px 60px;
+        background-repeat: repeat;
+    }
+    .bloque-div {
+        background-color: rgba(90, 104, 122, 0.82);
+        color: white;
+        max-width: 800px;
+        padding: 20px 30px;
+        margin: 0 auto;
+    }
+    .bloque-div h3 {
+        margin-top: 0;
+        font-size: 24px;
+    }
+    .bloque-div p {
+        line-height: 1.5;
+    }
+    .bloque-span {
+        background-color: rgba(222, 215, 170, 0.75);
+        max-width: 800px;
+        padding: 15px 30px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    .resaltado {
+        background-color: #e85fd0;
+    }
+    .negrita {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #333;
+        padding: 0 3px;
+    }
+    .cursiva {
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+
+    <nav class="menu-principal">
+        <a href="#ej1">Ejercicio 1</a>
+        <a href="#ej2">Ejercicio 2</a>
+        <a href="#ej3">Ejercicio 3</a>
+    </nav>
+
+    <!-- ===================== EJERCICIO 1: LISTAS ===================== -->
+    <section class="ejercicio" id="ej1">
+        <h2 class="titulo-seccion">Ejercicio 1: Listas</h2>
+
+        <div class="listas">
+            <div class="titulo-lista">lista no ordenada</div>
+            <ul>
+                <li>opcion1</li>
+                <li>opcion2
+                    <ul>
+                        <li>opcion21</li>
+                        <li>opcion22</li>
+                    </ul>
+                </li>
+                <li>opcion3</li>
+                <li>opcion4</li>
+                <li>opcion5</li>
+            </ul>
+
+            <hr>
+
+            <div class="titulo-lista">lista ordenada</div>
+            <ol>
+                <li>opcion1</li>
+                <li>opcion2
+                    <ul>
+                        <li>opcion21</li>
+                        <li>opcion22</li>
+                    </ul>
+                </li>
+                <li>opcion3</li>
+                <li>opcion4
+                    <ol type="a">
+                        <li>opcion41
+                            <ol type="i">
+                                <li>opcion411</li>
+                                <li>opcion412</li>
+                            </ol>
+                        </li>
+                        <li>opcion42</li>
+                    </ol>
+                </li>
+                <li>opcion5</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ===================== EJERCICIO 2: MENUS ===================== -->
+    <section class="ejercicio" id="ej2">
+        <h2 class="titulo-seccion">Ejercicio 2: Menús</h2>
+
+        <div class="menus">
+            <div class="contenedor">
+                <h3>lista no ordenada -&gt; menu horizontal</h3>
+
+                <ul class="menu-horizontal">
+                    <li><a href="#">opcion1</a></li>
+                    <li><a href="#">opcion2</a></li>
+                    <li><a href="#">opcion3</a></li>
+                    <li><a href="#">opcion4</a></li>
+                    <li><a href="#">opcion5</a></li>
+                </ul>
+
+                <hr>
+
+                <h3>lista no ordenada -&gt; menu vertical</h3>
+
+                <ul class="menu-vertical">
+                    <li><a href="#">opcion1</a></li>
+                    <li><a href="#">opcion2</a></li>
+                    <li class="activo"><a href="#">opcion3</a></li>
+                    <li><a href="#">opcion4</a></li>
+                    <li><a href="#">opcion5</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EJERCICIO 3: DIV Y SPAN ===================== -->
+    <section class="ejercicio" id="ej3" style="padding:0;">
+        <h2 class="titulo-seccion" style="padding:30px 30px 0 30px;">Ejercicio 3: div y span</h2>
+
+        <div class="bloques-contenedor">
+            <div class="bloque-div">
+                <h3>bloque div</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam tempor diam et accumsan. Vestibulum varius, sapien ut dignissim interdum, lorem risus lacinia enim, in mattis enim urna et sem. Suspendisse ligula lorem, egestas finibus tellus sit amet, finibus posuere tellus. Mauris tempus dictum consequat. Etiam eu dapibus ante. Sed at eros at sapien porttitor interdum nec nec leo. Donec quis venenatis nisl. Nulla eget nunc nisl. Sed suscipit metus eget orci aliquam lacinia ac id urna.</p>
+                <p>Sed non feugiat lorem. Praesent porttitor risus in consequat sagittis. Maecenas ut magna interdum, euismod eros quis, blandit neque. Ut rhoncus, magna eget tincidunt pellentesque.</p>
+            </div>
+
+            <div class="bloque-span">
+                <p>
+                    Lorem ipsum dolor sit amet, <span class="resaltado">consectetur adipiscing elit.</span>
+                    <span class="negrita">Vivamus nec libero dignissim</span>, consequat ex at, placerat velit. In accumsan ornare leo,
+                    <span class="cursiva">eget pulvinar nunc accumsan sed. Vestibulum dictum ante vel orci commodo posuere eu ultrices nisi.</span>
+                    Praesent sed venenatis ligula. Aenean ac congue sem, sit amet tincidunt sem. Nullam magna sapien, consequat in euismod et, volutpat vel lacus. Sed in pellentesque nunc. Praesent ullamcorper purus ut mollis semper. Aenean bibendum eros ut tellus pretium dignissim.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
