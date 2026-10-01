@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Ejercicio 1 - Formato de texto e hipervínculos</title>
-    <link rel="stylesheet" href="estilos2.css">
+<meta charset="UTF-8">
+<title>Ejercicio 1.1 - Formato de texto</title>
+<style>
+    body {
+        border: 1px solid #999999;
+        padding: 15px;
+        max-width: 800px;
+        font-family: "Times New Roman", Times, serif;
+    }
+    h2 {
+        color: red;
+    }
+    .imagen-central {
+        display: block;
+        margin: 20px auto;
+        width: 140px;
+    }
+    p.parrafo-grande {
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 30px;
+    }
+    .enlace-caja {
+        border: 2px solid blue;
+        padding: 5px;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 16px;
+    }
+</style>
 </head>
 <body>
 
-    <!-- Encabezado h1 predeterminado -->
     <h1>Esto es un encabezado h1</h1>
+    <h2><em>Esto es un encabezado h2</em></h2>
 
-    <!-- Encabezado h2 con estilo cursiva y rojo -->
-    <h2 class="subtitulo-rojo">Esto es un encabezado h2</h2>
+    <svg class="imagen-central" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#f0405a"/>
+        <rect x="25" y="28" width="38" height="46" rx="3" fill="#29b6f6" stroke="#0d47a1" stroke-width="1.5"/>
+        <rect x="30" y="36" width="24" height="6" fill="#ffffff"/>
+        <circle cx="25" cy="34" r="1.8" fill="#0d47a1"/>
+        <circle cx="25" cy="44" r="1.8" fill="#0d47a1"/>
+        <circle cx="25" cy="54" r="1.8" fill="#0d47a1"/>
+        <circle cx="25" cy="64" r="1.8" fill="#0d47a1"/>
+        <rect x="58" y="30" width="8" height="45" rx="2" fill="#ffd54f" stroke="#0d47a1" stroke-width="1.2" transform="rotate(25 58 30)"/>
+    </svg>
 
-    <!-- Imagen central de un cuaderno/libreta -->
-    <div class="contenedor-imagen">
-        <img src="" alt="Cuaderno y lápiz" width="180">
-    </div>
-
-    <!-- Párrafo formateado -->
-    <p class="parrafo-destacado">
+    <p class="parrafo-grande">
         Esto es un parrafo con un <mark>tamaño de 30px</mark><br>
         y <u>un salto de línea</u>. El estilo utiliza una <strong>fuente verdana</strong>
     </p>
 
     <hr>
+
+    <p class="enlace-caja">
+        Esto es un hipervínculo que va a google <a href="https://www.google.com" target="_blank">Ir a google</a>
+    </p>
+
+</body>
+</html>
