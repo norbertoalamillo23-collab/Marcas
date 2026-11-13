@@ -52,8 +52,8 @@ h2 {
 
 p,
 li,
- td,
- th {
+td,
+th {
   line-height: 1.6;
   color: var(--text);
 }
@@ -88,17 +88,17 @@ header {
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.25);
 }
 
-header h1 {
+.titulo-sitio {
   margin: 0;
   font-size: 1.7rem;
+  font-weight: bold;
   color: #fff;
 }
 
-header h2 {
+.subtitulo-sitio {
   margin: 0;
   font-size: 1.1rem;
   color: #dfe9ff;
-  font-weight: 400;
 }
 
 nav {
@@ -157,10 +157,8 @@ tbody tr:nth-child(even) {
   background: #f8fafc;
 }
 
-
-
 /* Colores de asignaturas (CLASES)*/
-.fdh{
+.fdh {
   background: #fef2f2;
   color: #991b1b;
   font-weight: bold;
@@ -178,7 +176,6 @@ tbody tr:nth-child(even) {
   font-weight: bold;
 }
 
-
 .iso {
   background: #f0fdf4;
   color: #166534;
@@ -191,7 +188,7 @@ tbody tr:nth-child(even) {
   font-weight: bold;
 }
 
-.bbdd{
+.bbdd {
   background: #ecfdf5;
   color: #166534;
   font-weight: bold;
@@ -207,14 +204,11 @@ tbody tr:nth-child(even) {
   font-weight: bold;
 }
 
-
-
 .recreo td {
   background: #fef3c7;
   color: #92400e;
   font-weight: bold;
 }
-
 
 .prog {
   background: #fef2f2;
@@ -227,7 +221,6 @@ tbody tr:nth-child(even) {
   color: #991b1b;
   font-weight: bold;
 }
-
 
 /* Pie de página */
 footer {
@@ -245,6 +238,95 @@ footer p {
 
 footer a {
   color: #facc15;
+}
+
+/* Menú con submenús */
+nav {
+  align-items: center;
+}
+
+.grupo {
+  position: relative;
+}
+
+.grupo-titulo {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.grupo-titulo:hover,
+.grupo:focus-within .grupo-titulo {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  min-width: 240px;
+  padding: 8px;
+  background: var(--primary-bg);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px var(--shadow);
+}
+
+.grupo:hover .submenu,
+.grupo:focus-within .submenu {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+/* Página actual resaltada */
+nav a.activo,
+.grupo-titulo.activo {
+  background: var(--accent);
+  color: var(--primary-bg);
+}
+
+/* Tarjetas de la página de inicio (Grid) */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.tarjeta {
+  display: block;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-page);
+  font-weight: normal;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px var(--shadow);
+  text-decoration: none;
+}
+
+.tarjeta h3 {
+  margin: 0 0 6px;
+}
+
+.tarjeta p {
+  margin: 0;
+  color: var(--muted);
 }
 
 /* Ajuste responsive */
@@ -267,5 +349,18 @@ footer a {
   table {
     display: block;
     overflow-x: auto;
+  }
+
+  .submenu {
+    position: static;
+    display: block;
+    padding: 0 0 0 10px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .grupo-titulo {
+    background: none;
+    padding-bottom: 0;
   }
 }
