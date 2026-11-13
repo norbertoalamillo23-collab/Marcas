@@ -1,0 +1,159 @@
+/* Estilos generales de la página */
+section.ejercicio {
+    padding: 10px 0 40px 0;
+    border-bottom: 4px solid #ddd;
+}
+
+section.ejercicio-ancho {
+    padding: 0;
+}
+
+/* ===================== EJERCICIO 1: LISTAS ===================== */
+.listas {
+    font-family: "Times New Roman", Times, serif;
+    max-width: 800px;
+}
+
+.listas .titulo-lista {
+    background-color: #5bc8e8;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: 6px 0;
+    margin-top: 25px;
+}
+
+.listas hr {
+    border: none;
+    border-top: 1px solid #999;
+    margin: 20px 0;
+}
+
+.listas ul {
+    list-style-type: circle;
+}
+
+.listas ul ul,
+.listas ol ul {
+    list-style-type: square;
+}
+
+/* ===================== EJERCICIO 2: MENUS ===================== */
+.menus {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.menus .contenedor {
+    border: 2px solid #4a86c5;
+    max-width: 800px;
+    padding: 15px 20px;
+}
+
+.menus .contenedor h3 {
+    font-size: 18px;
+}
+
+.menus .contenedor hr {
+    border: none;
+    border-top: 1px solid #999;
+    margin: 20px -20px;
+}
+
+.menus ul.menu-horizontal {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #8a8560;
+    display: flex;
+}
+
+.menus ul.menu-horizontal li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 18px 20px;
+}
+
+.menus ul.menu-vertical {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 220px;
+}
+
+.menus ul.menu-vertical li {
+    margin-bottom: 4px;
+}
+
+.menus ul.menu-vertical li a {
+    display: block;
+    background-color: #6fcf3d;
+    color: #f0fff0;
+    text-decoration: none;
+    padding: 18px 20px;
+}
+
+.menus ul.menu-vertical li.activo a {
+    background-color: #e01e1e;
+}
+
+/* ===================== EJERCICIO 3: DIV Y SPAN ===================== */
+.bloques-contenedor {
+    font-family: "Times New Roman", Times, serif;
+    padding: 20px 15px 30px 15px;
+    background-color: #f2f2f2;
+    background-image:
+        radial-gradient(circle 6px at 20px 10px, #e8604a 90%, transparent 100%),
+        radial-gradient(circle 6px at 110px 10px, #e8604a 90%, transparent 100%),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 30px,
+            #1a1a1a 30px,
+            #1a1a1a 34px,
+            transparent 34px,
+            transparent 60px
+        );
+    background-size: 130px 60px, 130px 60px, 130px 60px;
+    background-repeat: repeat;
+}
+
+.bloque-div {
+    background-color: rgba(90, 104, 122, 0.82);
+    color: white;
+    max-width: 800px;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+.bloque-div h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.bloque-div p {
+    line-height: 1.5;
+}
+
+.bloque-span {
+    background-color: rgba(222, 215, 170, 0.75);
+    max-width: 800px;
+    padding: 15px 30px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.resaltado {
+    background-color: #e85fd0;
+}
+
+.negrita {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #333;
+    padding: 0 3px;
+}
+
+.cursiva {
+    font-style: italic;
+}
