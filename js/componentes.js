@@ -1,11 +1,22 @@
-fetch("componentes/header.html")
-    .then(respuesta => respuesta.text())
-    .then(datos => {
-        document.getElementById("header").innerHTML = datos;
+function cargar(id, ruta, despues) {
+  fetch(ruta)
+    .then((respuesta) => respuesta.text())
+    .then((html) => {
+      document.getElementById(id).innerHTML = html;
+      if (despues) despues();
     });
+}
 
-fetch("componentes/footer.html")
-    .then(respuesta => respuesta.text())
-    .then(datos => {
-        document.getElementById("footer").innerHTML = datos;
-    });
+function marcarPaginaActiva() {
+  const actual = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll("nav a").forEach((enlace) => {
+    if (enlace.getAttribute("href") === actual) {
+      enlace.classList.add("activo");
+      const grupo = enlace.closest(".grupo");
+      if (grupo) grupo.querySelector(".grupo-titulo").classList.add("activo");
+    }
+  });
+}
+
+cargar("header", "componentes/header.html", marcarPaginaActiva);
+cargar("footer", "componentes/footer.html");

@@ -2,44 +2,18 @@
   --color-fondo: #f3f5fa;
   --color-tarjeta: #ffffff;
   --color-texto: #22263a;
-  --color-principal: #3b5bdb;
-  --color-principal-oscuro: #2c46b0;
+  --color-principal: var(--primary-soft);
+  --color-principal-oscuro: #1e40af;
   --color-tecla: #eceef6;
   --color-tecla-hover: #dde1f0;
   --color-accion: #d9defa;
-  --color-pantalla: #22263a;
+  --color-pantalla: var(--primary-bg);
   --radio: 14px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 30px 15px;
-}
-
-main {
-  background-color: var(--color-tarjeta);
-  width: 100%;
-  max-width: 380px;
-  padding: 26px 24px 20px;
-  border-radius: var(--radio);
-  box-shadow: 0 6px 24px rgba(30, 40, 90, 0.12);
+main.pagina-calculadora {
+  max-width: 420px;
   text-align: center;
-}
-
-h1 {
-  margin: 0 0 18px;
-  color: var(--color-principal);
 }
 
 /* Pantalla de resultados */
@@ -135,7 +109,7 @@ h1 {
 }
 
 @media (max-width: 400px) {
-  main {
+  main.pagina-calculadora {
     padding: 20px 14px 16px;
   }
   #resultado {
