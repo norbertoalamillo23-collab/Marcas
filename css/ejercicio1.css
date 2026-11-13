@@ -1,0 +1,165 @@
+section.ejercicio {
+    padding: 10px 0 40px 0;
+    border-bottom: 4px solid #ddd;
+}
+
+/* ===================== EJERCICIO 1 ===================== */
+.ejercicio1 {
+    border: 1px solid #999999;
+    padding: 15px;
+    max-width: 800px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.ejercicio1 h1,
+.ejercicio1 h2 {
+    margin: 10px 0;
+}
+
+.ejercicio1 h2 {
+    color: red;
+}
+
+.ejercicio1 .imagen-central {
+    display: block;
+    margin: 20px auto;
+    width: 140px;
+}
+
+.ejercicio1 p.parrafo-grande {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 30px;
+}
+
+.ejercicio1 .enlace-caja {
+    border: 2px solid blue;
+    padding: 5px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+/* ===================== EJERCICIO 2 ===================== */
+.ejercicio2 {
+    background-image: url('../image/flor-ejemplo-del-vector-44304295.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 500px;
+}
+
+.ejercicio2 h4 {
+    text-align: center;
+    color: #e8471c;
+}
+
+.ejercicio2 h4 mark {
+    font-size: 14px;
+}
+
+.ejercicio2 .boton {
+    display: inline-block;
+    background-color: #d9a90a;
+    color: #fffdf0;
+    font-weight: bold;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.ejercicio2 pre {
+    background-color: rgba(255,255,255,0.5);
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: "Courier New", monospace;
+}
+
+.ejercicio2 .capitulo4 {
+    background-color: #6f9ceb;
+    border: 2px solid black;
+    padding: 15px 20px;
+    margin-top: 40px;
+}
+
+.ejercicio2 .capitulo4 span {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 2px 6px;
+    border: 1px solid #999;
+}
+
+/* ===================== EJERCICIO 3 ===================== */
+.ejercicio3 {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.ejercicio3 table {
+    width: auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.ejercicio3 table.tabla1 {
+    border: 3px solid blue;
+    border-collapse: separate;
+    border-spacing: 6px;
+    margin-bottom: 30px;
+    padding: 20px 14px 10px;
+}
+
+.ejercicio3 table.tabla1 caption {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.ejercicio3 table.tabla1 tr {
+    background: transparent;
+}
+
+.ejercicio3 table.tabla1 th {
+    border: none;
+    text-align: center;
+    padding: 4px 10px;
+}
+
+.ejercicio3 table.tabla1 td {
+    border: 2px solid blue;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.ejercicio3 table.tabla2 {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.ejercicio3 table.tabla2 caption {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 8px;
+    caption-side: top;
+}
+
+.ejercicio3 table.tabla2 th,
+.ejercicio3 table.tabla2 td {
+    border: 2px solid #d1a415;
+    padding: 18px 30px;
+    text-align: center;
+}
+
+.ejercicio3 table.tabla2 th {
+    background-color: #e2e2e2;
+}
+
+.ejercicio3 table.tabla2 tr:nth-child(2) td,
+.ejercicio3 table.tabla2 tr:nth-child(4) td {
+    background-color: #8dc63f;
+}
+
+.ejercicio3 table.tabla2 tr:nth-child(3) td,
+.ejercicio3 table.tabla2 tr:nth-child(5) td {
+    background-color: #e2e2e2;
+}
