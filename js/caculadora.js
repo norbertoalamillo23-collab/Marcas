@@ -154,6 +154,7 @@ function limpiar() {
 // ---------- Teclado físico ----------
 
 document.addEventListener("keydown", function (evento) {
+  if (evento.target.closest("header, footer")) return;
   const tecla = evento.key;
 
   if (tecla >= "0" && tecla <= "9") {
