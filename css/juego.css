@@ -1,0 +1,179 @@
+:root {
+  --color-fondo: #f3f5fa;
+  --color-tarjeta: #ffffff;
+  --color-texto: #22263a;
+  --color-principal: #3b5bdb;
+  --color-principal-oscuro: #2c46b0;
+  --color-victoria: #2f9e44;
+  --color-derrota: #e03131;
+  --color-empate: #868e96;
+  --radio: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 15px;
+}
+
+main {
+  background-color: var(--color-tarjeta);
+  width: 100%;
+  max-width: 560px;
+  padding: 30px;
+  border-radius: var(--radio);
+  box-shadow: 0 6px 24px rgba(30, 40, 90, 0.12);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 8px;
+  color: var(--color-principal);
+}
+
+.instrucciones {
+  margin: 0 0 24px;
+  color: #5c6280;
+}
+
+/* Botones de elección */
+.opciones {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.opciones button {
+  flex: 1 1 120px;
+  padding: 16px 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--color-principal);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s, background-color 0.15s, box-shadow 0.15s;
+}
+
+.opciones button::before {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.opciones button:nth-child(1)::before { content: "✊"; }
+.opciones button:nth-child(2)::before { content: "✋"; }
+.opciones button:nth-child(3)::before { content: "✌️"; }
+
+.opciones button:hover {
+  background-color: var(--color-principal-oscuro);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(59, 91, 219, 0.35);
+}
+
+.opciones button:active {
+  transform: translateY(0);
+}
+
+.opciones button:focus-visible {
+  outline: 3px solid #ffd43b;
+  outline-offset: 2px;
+}
+
+/* Marcador */
+#marcador,
+#ganadas,
+#empatadas,
+#perdidas {
+  display: inline-block;
+  margin: 4px 3px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: #eceef6;
+}
+
+#ganadas   { background-color: #d3f9d8; color: #1e7a33; }
+#empatadas { background-color: #e9ecef; color: #495057; }
+#perdidas  { background-color: #ffe3e3; color: #b02525; }
+
+/* Resultado de la ronda */
+#resultado {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 12px;
+  background-color: #f1f3f9;
+  border: 3px solid transparent;
+}
+
+#resultado h2 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+#resultado p {
+  margin: 6px 0;
+}
+
+#jugada-jugador,
+#jugada-maquina {
+  font-size: 1.25rem;
+}
+
+#mensaje {
+  margin-top: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+#resultado.victoria {
+  background-color: #ebfbee;
+  border-color: var(--color-victoria);
+  animation: aparecer 0.4s ease;
+}
+#resultado.victoria #mensaje { color: var(--color-victoria); }
+
+#resultado.derrota {
+  background-color: #fff5f5;
+  border-color: var(--color-derrota);
+  animation: sacudir 0.4s ease;
+}
+#resultado.derrota #mensaje { color: var(--color-derrota); }
+
+#resultado.empate {
+  background-color: #f1f3f5;
+  border-color: var(--color-empate);
+  animation: aparecer 0.4s ease;
+}
+#resultado.empate #mensaje { color: #495057; }
+
+@keyframes aparecer {
+  from { opacity: 0.3; transform: scale(0.96); }
+  to   { opacity: 1;   transform: scale(1); }
+}
+
+@keyframes sacudir {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-8px); }
+  75%      { transform: translateX(8px); }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 15px;
+  }
+}
