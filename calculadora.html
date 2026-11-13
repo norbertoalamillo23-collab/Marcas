@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/calculadora.css" />
+    <script src="js/caculadora.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Calculadora</h1>
+
+      <div class="calculadora">
+        <!-- Pantalla de resultados -->
+        <div class="pantalla" aria-live="polite">
+          <div id="expresion"></div>
+          <div id="resultado">0</div>
+        </div>
+
+        <!-- Teclado -->
+        <div class="teclado">
+          <button type="button" class="accion" onclick="limpiar()">C</button>
+          <button type="button" class="accion" onclick="borrar()">⌫</button>
+          <button type="button" class="accion" onclick="porcentaje()">%</button>
+          <button type="button" class="operador" onclick="pulsarOperador('/')">÷</button>
+
+          <button type="button" onclick="pulsarNumero('7')">7</button>
+          <button type="button" onclick="pulsarNumero('8')">8</button>
+          <button type="button" onclick="pulsarNumero('9')">9</button>
+          <button type="button" class="operador" onclick="pulsarOperador('*')">×</button>
+
+          <button type="button" onclick="pulsarNumero('4')">4</button>
+          <button type="button" onclick="pulsarNumero('5')">5</button>
+          <button type="button" onclick="pulsarNumero('6')">6</button>
+          <button type="button" class="operador" onclick="pulsarOperador('-')">−</button>
+
+          <button type="button" onclick="pulsarNumero('1')">1</button>
+          <button type="button" onclick="pulsarNumero('2')">2</button>
+          <button type="button" onclick="pulsarNumero('3')">3</button>
+          <button type="button" class="operador" onclick="pulsarOperador('+')">+</button>
+
+          <button type="button" class="accion" onclick="cambiarSigno()">±</button>
+          <button type="button" onclick="pulsarNumero('0')">0</button>
+          <button type="button" onclick="pulsarDecimal()">,</button>
+          <button type="button" class="igual" onclick="igual()">=</button>
+        </div>
+      </div>
+
+      <p class="ayuda">También puedes usar el teclado: números, + − * /, Enter, Retroceso y Escape.</p>
+    </main>
+  </body>
+</html>
