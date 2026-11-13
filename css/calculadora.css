@@ -2,12 +2,12 @@
   --color-fondo: #f3f5fa;
   --color-tarjeta: #ffffff;
   --color-texto: #22263a;
-  --color-principal: var(--primary-soft);
+  --color-principal: #3b5bdb;
   --color-principal-oscuro: #1e40af;
   --color-tecla: #eceef6;
   --color-tecla-hover: #dde1f0;
   --color-accion: #d9defa;
-  --color-pantalla: var(--primary-bg);
+  --color-pantalla: #22263a;
   --radio: 14px;
 }
 
@@ -48,7 +48,6 @@ main.pagina-calculadora {
   white-space: nowrap;
 }
 
-/* Teclado en cuadrícula de 4 columnas */
 .teclado {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
